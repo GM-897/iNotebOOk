@@ -7,6 +7,7 @@ import Alert from "./components/Alert";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import { useState } from "react";
+
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type)=>{
