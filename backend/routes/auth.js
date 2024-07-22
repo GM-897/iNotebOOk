@@ -7,9 +7,7 @@ const bcrypt=require('bcrypt');
 const { body, validationResult } = require("express-validator");
 var jwt = require('jsonwebtoken');
 const getuser=require('../middlewares/getuser');
-const cors=require('cors')
 
-app.use(cors());
 //API request for creating new user
 router.post(
   "/createUser",
