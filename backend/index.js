@@ -1,15 +1,18 @@
-require('dotenv').config()
-const port=process.env.PORT;
+require('dotenv').config();
+const port = process.env.PORT;
 const connectToMongo = require("./db");
 const express = require("express");
-var cors = require('cors')
+const cors = require('cors');
+
 connectToMongo();
 const app = express();
-app.use(cors())
+
+app.use(cors());
 
 app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
+
 app.get("/", (req, res) => {
   res.send("Hello Manmohit!");
 });
