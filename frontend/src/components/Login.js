@@ -9,7 +9,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://inotebook-api-three.vercel.app/api/auth/login", {
+        const response = await fetch("https://my-note-book-sigma.vercel.app/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
